@@ -1,0 +1,6 @@
+fastapi    #Backend 
+uvicorn    #Runs Fastapi
+python-multipart    #image upload support
+torch         #Deep learning (Resnet18)
+torchvision    #Pretrained models
+pillow           # Image loading and processing

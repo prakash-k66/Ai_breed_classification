@@ -1,0 +1,16 @@
+# Dataset storage (IGNORE EVERYTHING)
+storage/
+
+# Just in case (extra safety)
+storage/data/
+storage/data/train/
+storage/data/test/
+storage/data/val/
+
+# Images
+*.jpg
+*.jpeg
+*.png
+
+# Virtual environment
+venv/

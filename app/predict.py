@@ -1,3 +1,4 @@
+#importing libraries
 import json
 import torch
 import torch.nn as nn
@@ -8,22 +9,17 @@ import io
 
 router = APIRouter()
 
-# --------------------------------------------------
-# Device
-# --------------------------------------------------
+#device
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# --------------------------------------------------
 # Load class names
-# --------------------------------------------------
+
 with open("artifacts/class_names.json", "r") as f:
     class_names = json.load(f)
 
 num_classes = len(class_names)
 
-# --------------------------------------------------
 # Load trained model
-# --------------------------------------------------
 model = models.resnet18(weights=None)
 model.fc = nn.Linear(model.fc.in_features, num_classes)
 
@@ -34,9 +30,8 @@ model.load_state_dict(
 model.to(device)
 model.eval()
 
-# --------------------------------------------------
-# Image transform (same as training)
-# --------------------------------------------------
+# Image transform 
+
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor(),
@@ -46,9 +41,8 @@ transform = transforms.Compose([
     )
 ])
 
-# --------------------------------------------------
-# Predict API (TOP-3)
-# --------------------------------------------------
+# Predict API 
+
 @router.post("/predict")
 async def predict_breed(image: UploadFile = File(...)):
     image_bytes = await image.read()

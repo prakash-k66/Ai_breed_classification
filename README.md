@@ -38,13 +38,6 @@ UI Display (Top-3 + Status)
 Total Images: 23,350
 Number of Breeds: 86
 
-Structure:
-storage/data/
-├── train/
-├── val/
-└── test/
-
-
 Dataset split ensures proper evaluation and generalization.
 
 🤖 Model Details
@@ -107,31 +100,6 @@ uvicorn app.main:app
 
 6️⃣ Open the web UI
 http://127.0.0.1:8000
-
-📂 Project Structure
-AI_breed_classification/
-│
-├── app/
-│   ├── main.py
-│   ├── model.py
-│   └── predict.py
-│
-├── artifacts/
-│   ├── breed_model.pth
-│   └── class_names.json
-│
-├── static/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-│
-├── storage/
-│   └── data/
-│       ├── train/
-│       ├── val/
-│       └── test/
-│
-└── README.md
 
 🧠 Design Decisions
 

@@ -115,14 +115,6 @@ http://127.0.0.1:8000
 - Frontend-backend integration
 - Practical AI system design
 
-🔮 Future Enhancements
-
-- GPU training for higher accuracy
-- Add “Unknown” class explicitly
-- Grad-CAM explainability
-- Cloud deployment
-- Prediction history & analytics
-- Integrated chatbot assistant
 
 🏁 Conclusion
 

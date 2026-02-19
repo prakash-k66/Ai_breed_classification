@@ -73,11 +73,8 @@ Confidence	Status
 
 ⚙️ Tech Stack
 Backend : FastAPI ,PyTorch ,Torchvision ,PIL
-
 Frontend : HTML ,CSS ,JavaScript (Fetch API)
-
 Storage : Local file system
-
 JSON for class labels
 
 🚀 How to Run the Project
@@ -101,7 +98,7 @@ uvicorn app.main:app
 6️⃣ Open the web UI
 http://127.0.0.1:8000
 
-🧠 Design Decisions
+-> Design Decisions
 
  - ResNet18 chosen for balance between accuracy and computational efficiency
  - Top-3 predictions used instead of forcing Top-1
